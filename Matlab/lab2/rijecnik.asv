@@ -1,0 +1,9 @@
+function y = rijecnik(fajl)
+
+    fid = fopen(fajl);
+    %if fid == -1, error('Greska pri otvaranju fajla');
+    sadrzajFajla = fscanf(fid,'%c');
+    fclose(fid);
+    y = sadrzajFajla;
+    y = tokenizuj(sadrzajFajla);
+end
