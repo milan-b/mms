@@ -22,9 +22,12 @@ for c = 1:size(test_set,1)
     pomLabel = zeros(size(training_set, 1), 1);
     for k = 1 : size(training_set,1)
         tVec = training_set(k,:);
-        pomLabel(k,1) = (vec * tVec')/(norm(vec)*norm(tVec))
+        pomLabel(k,1) = (vec * tVec')/(norm(vec)*norm(tVec));%udaljenost od svakog u trening setu
     end
+    pomMin = max(pomLabel);
+    pomRez = find(pomLabel == pomMin, 1);
     
+    label(c) =  training_C( pomRez(1));
 end
 
 %return label;

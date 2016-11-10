@@ -17,14 +17,16 @@ label = zeros(size(test_set, 1), 1);
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-for c = 1 : size(test_set,1)
+for c = 1:size(test_set,1)
     vec = test_set(c,:);
-    pomLabel = zeros(size(taining_set, 1), 1);
+    pomLabel = zeros(size(training_set, 1), 1);
     for k = 1 : size(training_set,1)
         tVec = training_set(k,:);
-        pomLabel(k,1) = (vec * tVec')/(norm(vec)*norm(tVec))
+        pomLabel(k,1) = (vec * tVec')/(norm(vec)*norm(tVec));%udaljenost od svakog u trening setu
     end
-    
+    pomMin = min(pomLabel);
+    label(c) =  training_C( pomLabel == pomMin) 
 end
 
-return label;
+%return label;
+end
