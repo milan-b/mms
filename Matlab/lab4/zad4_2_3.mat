@@ -1,0 +1,1201 @@
+%-- 12/24/2015 8:21 AM --%
+nn_main
+load('C:\Users\LAB\Documents\MATLAB\MMSlab10\nn\cifre.mat')
+load('C:\Users\LAB\Documents\MATLAB\MMSlab10\nn\cifre.mat', 'X')
+%-- 1/13/2016 10:25 AM --%
+h=tf(1,[0.5 1])
+h=tf(1,[1 1])
+h=tf(1,[2 1])
+h=tf(1,[5 1])
+impulse(1, [0.5 1], 0.5)
+impulse(1, [1 1], 1)
+impulse(1, [1 1], 2)
+impulse(1, [1 1], 3)
+impulse(1, [2 1], 3)
+impulse(1, [2 1], 5)
+impulse(1, [5 1], 15)
+fregs(1, [1 1])
+freqs(1, [1 1])
+freqs(1, [0.5 1])
+freqs(1, [2 1])
+freqs(1, [5 1])
+h=tf([100 1],[1 100 10000])
+h=tf([100 0],[1 100 10000])
+impulse([100 0],[1 100 10000])
+freqs([100 0],[1 100 10000])
+h=tf([1000 0],[1 1000 10000000])
+impulse([1000 0],[1 1000 100000000])
+freqs([1000 0],[1 1000 100000000])
+h=tf([10000 0],[1 10000 1000000000000])
+impulse([10000 0],[1 10000 1000000000000])
+freqs([10000 0],[1 10000 1000000000000])
+______________
+n=1:20
+x=zeros(20,1)
+x(5)=0,9
+stem(n,x)
+x(5)=0.9
+stem(n,x)
+n=-15:15
+x=zeros(31,1)
+x(16)=0.8
+stem(n,x)
+n=-10:0
+x=zeros(11,1)
+x(4)=4.5
+stem(n,x)
+n=-15:20
+x=sin(pi*n/17)
+stem(n,x)
+n=-10:10
+x=sin(3*pi*n+pi/2)
+stem(n,x)
+n=0:8
+x=sin(2*pi*100*n/8000)
+stem(n,x)
+n=0:80;
+x=sin(2*pi*225*n/8000);
+stem(n,x)
+n=0:80;
+x=sin(2*pi*350*n/8000);
+stem(n,x)
+n=0:80;
+x=sin(2*pi*475*n/8000);
+stem(n,x)
+plot(n,x)
+n=0:80;
+x=sin(2*pi*7525*n/8000);
+stem(n,x)
+plot(n,x)
+n=0:80;
+x=sin(2*pi*7650*n/8000);
+stem(n,x)
+plot(n,x)
+n=0:80;
+x=sin(2*pi*7650*n/8000);
+stem(n,x)
+plot(n,x)
+n=0:80;
+x=sin(2*pi*7775*n/8000);
+stem(n,x)
+plot(n,x)
+n=0:80;
+x=sin(2*pi*7900*n/8000);
+stem(n,x)
+plot(n,x)
+[Y,FO]=audioread('handel44100.wav');
+[Y,FO,nbits]=wavread('handel44100.wav');
+n=-10:100;
+a=[1 0]
+b=[1 -0.5]
+x=zeros(111,1);
+x(11)=1;
+y=filter(a,b,x)
+stem(n,x)
+freqz(a,b)
+y=filter(a,b,x)
+stem(n,x)
+freqz(a,b)
+n=0:20;
+z=sin(n*pi/2)
+y=filter(a,b,z);
+sublot(211);
+subplot(211);
+subplot(211)
+stem(n,real(y))
+stem(n, imag(y))
+freqz(a,b)
+%-- 2/17/2016 2:50 PM --%
+load('VLAD_deskriptori_updated_8.mat')
+load('rez_Klase.mat')
+which svmtrain
+Racuna_VLAD_Desc_Obucava_SVM
+which svmtrain
+%-- 2/17/2016 3:19 PM --%
+Racuna_VLAD_Desc_Obucava_SVM
+%-- 2/17/2016 3:27 PM --%
+which svmtrain
+%-- 2/17/2016 3:43 PM --%
+which svmtrain
+Racuna_VLAD_Desc_Obucava_SVM
+%-- 2/17/2016 3:45 PM --%
+Racuna_VLAD_Desc_Obucava_SVM
+%-- 2/23/2016 11:22 AM --%
+Racuna_VLAD_Desc_Obucava_SVM
+which svmtrain
+mex -setup
+%-- 2/24/2016 8:24 AM --%
+a= 1 2 3 5 6
+a = 2+2
+2+2
+ans*2
+A=5
+A=5;
+A = [1, 1; 1,1]
+B=[2,5;3,5]
+A+B
+A*B
+A.*B
+C = [1,2,3]
+c=[1;2;3]
+d=[1;1;1]
+c*d
+c.*d
+A=[1,2;3,4]
+A=(2,1)=10
+A(2,1)=10
+A(2)=11
+A(1,:)=
+A(1,:)
+G=(:,2)
+G(:,2)
+h=G=(:,2)
+h=G(:,2)
+k=(:,2)
+A=[1,1,1;1,1,1;1,1,1]
+L=ones(m,n);
+m=1;
+n=1;
+L=ones(m,n);
+m=100;
+n=100;
+L=ones(m,n)
+K=[1;-1;2]
+A(:,2)=[1,0,2]
+A(:,3)=[1,0,2]
+A(:,2)=[1,1,1]
+A(:,2)=K
+detA
+det(A)
+%-- 3/2/2016 8:04 AM --%
+A = [1, 7, 8; 2, 9, 13; 4, 8, 11; 2, 5, 3];
+A(:,1) = [1; 2; 4; 2];
+A(1 : 3, 1)
+who
+whos
+x = [1, 7, 5, 4.3, 2, 9, 11, 8.8];
+plot(x)
+stem(x)
+y = [2,5,4,7,8,5,23,5];
+plot(x,y)
+stem(x,y)
+x=-5:0.01:5;
+y=x.*x;
+plot(x,y)
+stem(x,y)
+y1 = x .^ 2 - 4;
+y2 = x .^ 2 + 4;
+plot(x, y, x, y1, x, y2);
+x=sint;
+pi
+stem(x,y)
+surf(40 * membrane(1, 25));
+surf(100 * membrane(1, 25));
+surf(100 * membrane(1, 2));
+surf(100 * membrane(1, 10000));
+surf(100 * membrane(1, 1));
+%-- 3/9/2016 8:15 AM --%
+Vjezba_1
+plot(k,P);
+k = -3 : 0.01 : 3;
+P=k.^3 - 4*k.^2 - 2*k +6;
+plot(k,P);
+a=roots(P);
+c=poly(a);
+%-- 3/14/2016 10:19 AM --%
+a = imread('lena.jpg');
+help imread
+figure, imshow(a)
+figure, imtool(a)
+b = om2double(a)
+b = im2double(a)
+imshow(b)
+imfinfo('lena.jpg')
+help imwrite
+imwrite(b,'res_50.jpg','Quality',25);
+imwrite(b,'res_5.jpg','Quality',5);
+c = imread('blobs.tif')
+imfinfo('blobs.png')
+c = imread('blobs.png');
+figure, imshow(c)
+d = dicomread('CT_pluca.dcm');
+figure, imshow(d)
+figure, imshow(d, [])
+figure, imshow(d, [864 1264])
+e = double(d);
+f = mat2gray(e, [864, 1264]);
+figure, imshow(f)
+g = im2double(e, [864, 1264]);
+g = im2double(e);
+figure, imshow(g)
+g = im2double(d);
+figure, imshow(g)
+a=imread('lena.jpg');
+ogl=a(:, end:1);
+figure, imshow(ogl)
+ogl=a(:, 256:-1:1);
+figure, imshow(ogl)
+a(1:2:end, 1:2:end)=0;
+figure, imshow(a)
+%-- 3/16/2016 8:04 AM --%
+Vjezba_1
+t= -10 : 0.1 : 10;
+x=t*exp(jt);
+Vjezba_1
+t= -10 : 0.1 : 10;
+x=t*exp(t*j);
+t= -10 : 0.1 : 10;
+x=t*exp(tj);
+t= -10 : 0.1 : 10;
+x=t*exp(t*j);
+t= -10 : 0.1 : 10;
+x=t.*exp(t.*j);
+X=real(x);
+plot(X);
+subplot(1,2,1);
+t= -10 : 0.1 : 10;
+x=t.*exp(t.*j);
+X=real(x);
+subplot(1,2,1);
+Y=imag(x);
+subplot(1,2,2);
+t= -10 : 0.1 : 10;
+x=t.*exp(t.*j);
+X=real(x);
+subplot(1,2,1);
+plot(X);
+Y=imag(x);
+subplot(1,2,2);
+plot(Y);
+t= -10 : 0.1 : 10;
+x=t.*exp(t.*j);
+X=real(x);
+subplot(1,2,1);
+plot(X);
+Y=imag(x);
+subplot(1,2,1);
+plot(Y);
+t= -10 : 0.1 : 10;
+x=t.*exp(t.*j);
+X=real(x);
+subplot(2,1,1);
+plot(X);
+Y=imag(x);
+subplot(2,1,2);
+plot(Y);
+xlabel(‘t’);
+ylabel(‘x(t)’);
+t= -10 : 0.1 : 10;
+x=t.*exp(t.*j);
+X=real(x);
+subplot(2,1,1);
+plot(X);
+xlabel('real(x)');
+Y=imag(x);
+subplot(2,1,2);
+plot(Y);
+xlabel('imag(x)');
+Vjezba_1
+suma (1,1,2)
+suma(1,1,2)
+%-- 3/16/2016 11:03 AM --%
+Wp=2*pi*500;
+Ws=2*pi*1000;
+Ap=3;
+As=30;
+W0=Wp;
+wp=Wp/W0;
+ws=Ws/W0;
+[N, Wn]=buttord (wp,ws,Ap,As,'s')
+[b,a]=butter(N, Wn,'s')
+[bd,ad]=lp2lp(b,a,W0)
+[h,p]=freqs(b,a)
+plot(b,a)
+plot(h,p)
+tf(b,a)
+tf(bn,an)
+tf(bd,ad)
+w=2*pi*(0:10000);
+hb=freqs(bd,ad,w);
+figure
+figure;
+plot(w/2/pi,abs(hb));
+axis([0 2500 -0.2 1.2]);
+title('Amplitudna karakteristika filtra');
+xlabel('\omega');
+ylabel('|H(j\omega)|');
+figure;
+semilogix(w/2/pi,------
+Wp=2*pi*500;
+Ws=2*pi*1000;
+Ap=3;
+As=30;
+[nb,Wp]=buttord(Wp,Ws,Ap,As,'s');
+Wp=2*pi*500;
+Ws=2*pi*1000;
+Ap=3;
+As=30;
+[nb,Wnb]=buttord(Wp,Ws,Ap,As,'s');
+[bb,ab]=butter(nb,Wnb,'s');
+w=2*pi*(0:10000);
+hb=freqs(bb,ab,w);
+[nc1,Wnc1]=cheb1ord(Wp,Ws,Ap,As,'s');
+[bc1,ac1]=cheby1(nc1,Ap,Wnc1,'s');
+w=2*pi*(0:10000);
+hc1=freqs(bc1,ac1,w);
+[nc2,Wnc2]=cheb2ord(Wp,Ws,Ap,As,'s');
+[bc2,ac2]=cheby2(nc2,As,Wnc2,'s');
+w=2*pi*(0:10000);
+hc2=freqs(bc2,ac2,w);
+[ne,Wne]=ellipord(Wp,Ws,Ap,As,'s');
+[be,ae]=ellip(ne,Ap,As,Wne,'s');
+w=2*pi*(0:10000);
+he=freqs(be,ae,w);
+figure;
+plot(w/2/pi,abs(hb),'b');
+hold on;
+plot(w/2/pi,abs(hc1),'g');
+hold on;
+plot(w/2/pi,abs(hc2),'r');
+hold on;
+plot(w/2/pi,abs(he),'k');
+Wp=2*pi*500;
+Ws=2*pi*1000;
+Ap=3;
+As=30;
+[nb,Wnb]=buttord(Wp,Ws,Ap,As,'s');
+[bb,ab]=butter(nb,Wnb,'s');
+w=2*pi*(0:10000);
+hb=freqs(bb,ab,w);
+[nc1,Wnc1]=cheb1ord(Wp,Ws,Ap,As,'s');
+[bc1,ac1]=cheby1(nc1,Ap,Wnc1,'s');
+w=2*pi*(0:10000);
+hc1=freqs(bc1,ac1,w);
+[nc2,Wnc2]=cheb2ord(Wp,Ws,Ap,As,'s');
+[bc2,ac2]=cheby2(nc2,As,Wnc2,'s');
+w=2*pi*(0:10000);
+hc2=freqs(bc2,ac2,w);
+[ne,Wne]=ellipord(Wp,Ws,Ap,As,'s');
+[be,ae]=ellip(ne,Ap,As,Wne,'s');
+w=2*pi*(0:10000);
+he=freqs(be,ae,w);
+figure;
+plot(w/2/pi,abs(hb),'b');
+axis([0 2500 -0.2 1.2]);
+hold on;
+plot(w/2/pi,abs(hc1),'g');
+axis([0 2500 -0.2 1.2]);
+hold on;
+plot(w/2/pi,abs(hc2),'r');
+axis([0 2500 -0.2 1.2]);
+hold on;
+plot(w/2/pi,abs(he),'k');
+axis([0 2500 -0.2 1.2]);
+%-- 3/23/2016 9:05 AM --%
+simulink
+C:\Users\LAB\Desktop\Ivana Gudalo\lab2
+g
+%-- 3/23/2016 12:07 PM --%
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=Wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,w]=elipord[Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+Wo=wp;
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,w]=elipord[Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,w]=ellipord[Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,w]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+Bw=1000/5;
+W0=2*pi*1000;
+[bpo,apo]=lp2bp(b,a,W0,Bw);
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+Bw=1000/5;
+W0=2*pi*1000;
+[bpo,apo]=lp2bp(b,a,W0,Bw);
+w=2*pi*(0:2500);
+h=freqs(b,a,w);
+figure;
+plot(w/2/pi,abs(h));
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+Bw=1000/5;
+W0=2*pi*1000;
+[bpo,apo]=lp2bp(b,a,W0,Bw);
+w=2*pi*(0:2500);
+h=freqs(b,a,w);
+figure;
+plot(w/2/pi,abs(h));
+axis([0 3000 -0.2 1.2]);
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+Bw=1000/5;
+W0=2*pi*1000;
+[bpo,apo]=lp2bp(b,a,W0,Bw);
+w=2*pi*(0:2500);
+h=freqs(bpo,apo,w);
+figure;
+plot(w/2/pi,abs(h));
+axis([0 3000 -0.2 1.2]);
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+Bw=1000/5;
+W0=2*pi*1000;
+[bpo,apo]=lp2bp(b,a,W0,Bw);
+w=2*pi*(0:2500);
+h=freqs(bpo,apo,w);
+figure;
+plot(w/2/pi,abs(h));
+axis([500 1500 0 1.2]);
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+Wo=wp;
+Wp=wp/Wo;
+Ws=ws/Wo;
+[n,wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,wn,'s');
+Bw=1000/5;
+W0=2*pi*1000;
+[bpo,apo]=lp2bp(b,a,W0,Bw);
+w=2*pi*(0:2500);
+h=freqs(bpo,apo,w);
+figure;
+plot(w/2/pi,abs(h));
+axis([900 1100 0 1.2]);
+dt=50*e-2
+%-- 3/24/2016 12:25 PM --%
+help imhist
+help histeq
+%-- 3/31/2016 11:22 AM --%
+help imfilter
+help fspecial
+lab3
+help imfilter
+lab3
+d = im2double(a);
+d = im2double(a);
+e = imnoise(d, 'salt and pepper', 0.01);
+figure, imshow(e)
+help imnoise
+d = im2double(a);
+e = imnoise(d, 'salt & pepper', 0.01);
+figure, imshow(e)
+d = im2double(a);
+e = imnoise(d, 'salt & pepper', 0.01);
+figure, imshow(e)
+e1 = imfilter(e, h3);
+[e2, noise] = wiener(e, [3 3]);
+[e3, noise] = wiener(e, [5 5]);
+e4 = medfilt2(e, [3 3]);
+figure, imshow(e1)
+figure, imshow(e2)
+figure, imshow(e3)
+figure, imshow(e4)
+d = im2double(a);
+e = imnoise(d, 'salt & pepper', 0.01);
+figure, imshow(e)
+e1 = imfilter(e, h3);
+[e2, noise] = wiener2(e, [3 3]);
+[e3, noise] = wiener2(e, [5 5]);
+e4 = medfilt2(e, [3 3]);
+figure, imshow(e1)
+figure, imshow(e2)
+figure, imshow(e3)
+figure, imshow(e4)
+close all
+%-- 4/7/2016 11:17 AM --%
+figure, imshow(abs(A), [])
+%-- 4/13/2016 12:07 PM --%
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+wo=wp;
+Wp=wp/wo;
+Ws=ws/wo;
+rs=100;
+rl=100;
+Ro=rs;
+Rs=rs/Ro;
+Rl=rl/Ro;
+[n,Wn]=ellipord(Wp,Ws,Ap,As,'s');
+[n,Wn]=ellipord(Wp,Ws,Ap,As,'s')
+[b,a]=ellip(n,Ap,As,Wn,'s')
+b1=b;
+a1=[-1 0.5870 -0.9710 0.3135];
+b2=b1*b;
+b1=b;
+a1=[-1 0.5870 -0.9710 0.3135];
+b2=b1.*b;
+b2=b1.*b
+e=a1.*a
+a2=[1 -0.5870 0.9710 -0.3135];
+e=a2.*a
+a1=[-1 1 -1 1];
+e=a.*a1
+e=b*a1
+e=b.*a1
+e=a.*a1
+e1=e.*a
+m=[-1 1 -1 1];
+a1=a.*m;
+a2=a.*a1
+wp=2*pi*500;
+ws=2*pi*1000;
+Ap=3;
+As=30;
+wo=wp;
+Wp=wp/wo;
+Ws=ws/wo;
+rs=100;
+rl=100;
+Ro=rs;
+Rs=rs/Ro;
+Rl=rl/Ro;
+[n,Wn]=ellipord(Wp,Ws,Ap,As,'s');
+[b,a]=ellip(n,Ap,As,Wn,'s')
+m=[-1 1 -1 1];
+a1=a.*m;
+a2=a.*a1
+b
+a
+a.*[-1 1 -1 1]
+conv(a,ans)
+b1=b.*[-1 1 -1 1]
+conv(b,b1)
+q1=(-1).conv(a,ans)-b1
+q1=(-1).*conv(a,ans)-b1
+a2=conv(a,ans)
+a2=[-1.0000         0   -1.5974         0   -0.5747         0    0.0983
+a2=[-1.0000         0   -1.5974         0   -0.5747         0    0.0983]
+a1=2.*[-1 1 -1 1]
+a1=a.*[-1 1 -1 1]
+a2=conv(a,a1)
+b1=b.*[-1 1 -1 1];
+b2=conv(b,b1)
+q1=a2-b2
+roots(q1)
+sqrt(0.8058)
+qa=[1 0 0.8058 0]
+z1=a-qa
+z2=a+qa
+%-- 4/21/2016 11:35 AM --%
+clear all
+%% 1
+[U, V]=freqspace([256 256], 'meshgrid');
+a=10;
+b=10;
+T=1;
+H=T*sinc(pi*(U*a + V*b)).*exp((-1j).*(pi*(U*a + V*b)));
+f = imread('lena.jpg');
+figure, imshow(f)
+F=fft2(f);
+F = fftshift(F);
+C=F.*H;
+C = fftshift(C);
+c=ifft2(C);
+figure, imshow(real(c), [])
+v=imnoise( c, 'gaussian', 0, 1e-6);
+figure, imshow(real(v))
+%-- 4/25/2016 10:21 AM --%
+help bwmorph
+help strel
+%-- 5/5/2016 11:54 AM --%
+help edge
+lines
+%-- 5/11/2016 10:18 AM --%
+Untitled
+%-- 5/11/2016 1:11 PM --%
+wp=2*pi*1000;
+W0=wp;
+wz1=2*pi*2000/W0;
+wz1
+10^0.1
+ans*9
+ans-9
+wp=2*pi*1000;
+W0=wp;
+wz1=2*pi*2000/W0;
+a=[-2.3303 0 1 0 8 0 16]
+roots(a)
+0.49*2
+0.49^2
+1.1672^2
+ans+0.2401
+conv([1 0.98 1.6025],[0 1 1.16351])
+sqrt(2.3303)
+roots(a)
+1.1672^2
+0.49^2
+ans+1.3
+W0^2
+ans*W0
+W0
+[3,Wn]=buttord(1,1,'s');
+[3,Wn]=buttord(1,ws,1,20,'s')
+2.7427/2
+sqrt(ans)
+1.8645/2.1435
+sqrt(ans)
+2.7427-8
+ans/(1.8645-4*2.1435)
+2-2.1435*0.7836
+2.7427-0.7836*1.8645
+ans/0.3204
+1.8645-4*2.1435
+ans/(4*0.3204)
+2.1435-5.2353*0.3204
+1.8645/ans
+2.1435-5.2353*0.3204
+0.3204/ans
+1/1/5.2353
+4/5.2353
+0.3204/0.4661
+1.8645/0.4661
+b=[1 0 -99/2.3303 0 (99*8)/2.3303 0 -99*6];
+roots(b)
+b1=[0 1 0 4];
+a1=[1.5265 2.1436*1.5256 2.7427*1.5256 1.8645*1.5265];
+w=2*pi*(0:10000);
+hb=freqs(b1,a1,w);
+plot(w/2/pi,abs(hb),'r');
+b1=[0 1 0 4];
+a1=[1.5265 2.1436*1.5256 2.7427*1.5256 1.8645*1.5265];
+w=2*pi*(0:10);
+hb=freqs(b1,a1,w);
+plot(w/2/pi,abs(hb),'r');
+b1=[0 1 0 4];
+a1=[1.5265 2.1436*1.5256 2.7427*1.5256 1.8645*1.5265];
+w=2*pi*(0:4);
+hb=freqs(b1,a1,w);
+plot(w/2/pi,abs(hb),'r');
+help lp2lp
+b1=[0 1 0 4];
+a1=[1.5265 2.1436*1.5256 2.7427*1.5256 1.8645*1.5265];
+[bd,ad]=lp2lp(b1,a1,W0);
+w=2*pi*(0:4);
+hb=freqs(bd,ad,w);
+plot(w/2/pi,abs(hb),'r');
+title('Amplitudna karakteristika');
+xlabel('f');
+ylabel('|H(s)|');
+b1=[0 1 0 4];
+a1=[1.5265 2.1436*1.5256 2.7427*1.5256 1.8645*1.5265];
+[bd,ad]=lp2lp(b1,a1,W0);
+w=2*pi*(0:10000);
+hb=freqs(bd,ad,w);
+plot(w/2/pi,abs(hb),'r');
+title('Amplitudna karakteristika');
+xlabel('f');
+ylabel('|H(s)|');
+wp=2*pi*1000;
+W0=wp;
+wz1=2*pi*2000/W0;
+a=[-2.3303 0 1 0 8 0 1];
+b1=[0 1 0 4];
+a1=[1.5265 2.1436*1.5256 2.7427*1.5256 1.8645*1.5265];
+[bd,ad]=lp2lp(b1,a1,W0);
+w=2*pi*(0:10000);
+hb=freqs(bd,ad,w);
+plot(w/2/pi,abs(hb),'r');
+title('Amplitudna karakteristika');
+xlabel('f');
+ylabel('|H(s)|');
+10^2
+help log
+plot(w/2/pi,20*log(abs(hb)),'r');
+title('Funkcija pojacanja');
+xlabel('f');
+ylabel('|H(s)| [DB]');
+plot(w/2/pi,10*log(abs(hb)),'r');
+title('Funkcija pojacanja');
+xlabel('f');
+ylabel('|H(s)| [DB]');
+plot(w/2/pi,angle(hb),'r');
+title('Fazna karakteristika');
+xlabel('f');
+ylabel('argH(s)');
+2.7427-8
+ans/(1.8645-4*2.1435)
+2-ans*2.1435
+1.8645*0.7836
+2.7427-ans
+ans/0.3204
+2.1435*(-4)
+ans+1.8645
+ans/4
+ans/0.3204
+1/5.2353
+4/5.2353
+ans/W0
+ans*50
+0.191/W0
+ans*50
+0.191/W0/50
+0.7836/W0
+ans/50
+0.6874/W0
+ans/50
+0.304/0.4661
+0.3204/0.4661
+2+2.7427
+ans*5.2353
+2.1435-5.2353*0.3204
+0.191/w0
+0.191/W0
+ans/50
+roots([1 0 6 0 9])
+poly([-0.0000 - 1.7321i -0.0000 - 1.7321i])
+poly([-0.0000 - 1.7321i 0.0000 - 1.7321i])
+poly([0.0000 - 1.7321i 0.0000 - 1.7321i])
+poly([0.0000 - 1.7321i 0.0000 + 1.7321i])
+roots([4 0 0 0 1 0 6 0 9])
+poly([ -1.0641 + 0.5330i -1.0641 - 0.5330i -0.3247 + 0.9765i -0.3247 - 0.9765i])
+roots([4 0 0 0 1 0 6 0 9])
+poly(ans([1,2,5,6]))
+a=poly(ans([1,2,5,6]))
+roots([4 0 0 0 1 0 6 0 9])
+a=poly(ans([1,2,5,6]))
+roots([1 0 6 0 9])
+b=poly(ans([1,2]))
+a
+h=freqs(b,a);
+figure,plot(abs(h))
+w=0:10:10000;
+h=freqs(b,a,w);
+figure,plot(abs(h))
+w=2*pi(0:10:10000);
+w=2*pi*(0:10:10000);
+h=freqs(b,a,w);
+figure,plot(abs(h))
+h=freqs(b,a);
+figure,plot(abs(h))
+figure,semilogx(20*log10(abs(h)))
+roots([2.7776 0 3.1738 0])
+1.0689*1.0689
+roots([2 0 3.8576 0 1.5000])
+0.7349*0.7349
+1.1784*1.1784
+roots([2 0 3.8576 0 1.5000])
+poly(ans([3,4]))
+roots([0.2079 0 0.8037 0 0.54])
+0.9305*0.9305
+help unwrap
+%-- 10/26/2016 9:20 AM --%
+lab1dos
+lab1dos
+lab1dos
+%-- 10/27/2016 7:21 AM --%
+MSLab1
+help flip
+MSLab1
+MSLab1b
+help iminfo
+MSLab1b
+help imshow
+MSLab1b
+MSLab1c
+MSLab1c
+%-- 10/27/2016 8:48 AM --%
+MSLab1c
+%-- 11/3/2016 8:21 AM --%
+str = 'zdravo'
+str_niz = {'zdravo','zbogom', 'zdravo', 'zbogom', 'zdravo', 'zdravoratumski'}
+strfind(str_niz, 'zdravo')
+strfind(str_niz, ^'zdravo')
+strfind(str_niz, '[zdravo]')
+strfind(str_niz, '[zdravo]+1')
+strfind(str_niz, '[.]+5')
+strfind(str_niz, '[.]+4')
+strfind(str_niz, '[.]*4')
+strfind(str_niz, '.4')
+strfind(str_niz, '.5')
+strfind(str_niz, '.....')
+strfind(str_niz, '......')
+strfind(str_niz, '[A-Za-z]')
+regex(str_niz, '[A-Za-z]')
+regexp(str_niz, '[A-Za-z]')
+regexp(str_niz, 'Zdavo')
+str_niz = {'zdravo','zbogom', 'zdravo', 'zbogom', 'zdravo', 'zdravoratumski'}
+help strfind
+strexp(str_niz, 'zdravo')
+strexp(str_niz, 'Zdravo')
+regexp(str_niz, 'Zdravo')
+str_niz = {'zdravo','zbogom', 'zdravo', 'zbogom', 'zdravo', 'zdravoratumski'}
+regexp(str_niz, 'zdravo')
+regexp(str_niz, 'zdravor')
+regexp(str_niz, 'zdravo.')
+regexp(str_niz, '[zdravo]')
+regexp(str_niz, '[zdravo]+1')
+regexp(str_niz, '[zdravo]+0')
+regexp(str_niz, '[zdravo]*1')
+regexp(str_niz, '[zdravo].')
+regexp(str_niz, 'zdravo')
+regexp(str_niz, '\^zdravo')
+regexp(str_niz, '^zdravo')
+regexp(str_niz, '^zdravo$')
+str_niz
+regexp(str_niz, '^zdravo$')
+intersect(str_niz, 'zdravoratumski')
+intersect('zdravo', 'zdravoratumski')
+intersect('zdravoratumski', 'zdravo')
+[C,ia,ib] = intersect('zdravoratumski', 'zdravo')
+[C,ia,ib] = intersect(str_niz, 'zdravoratumski')
+for i=0, length(str_niz)
+strr(i) = intersect(str_niz(i), 'zdravoratumski')
+end
+for i=1, length(str_niz)
+strr(i) = intersect(str_niz(i), 'zdravoratumski')
+end
+for i=1:length(str_niz)
+strr(i) = intersect(str_niz(i), 'zdravoratumski')
+end
+for i=1:length(str_niz)
+strr(i) = intersect(str_niz{i}, 'zdravoratumski')
+end
+for i=1:length(str_niz)
+str_niz{i}
+end
+for i=1:length(str_niz)
+strrr(i) = intersect(str_niz{i}, 'zdravoratumski')
+end
+for i=1:length(str_niz)
+dd{i} = intersect(str_niz{i}, 'zdravoratumski')
+end
+dd
+for i=1:length(str_niz)
+length(intersect(str_niz{i}, 'zdravoratumski'))
+end
+for i=1:length(str_niz)
+duzina{i} = length(intersect(str_niz{i}, 'zdravoratumski'))
+end
+duzina
+max(duzina)
+dd = {1 2}
+max(dd)
+dd = [1 2]
+max(dd)
+recenica = 'ci peci pec ti si mali zec'.'
+recenica
+strsplit(recenica, ' ')
+recenica = 'ci peci pec ti si mali zec'
+strsplit(recenica, ' ')
+sadrzaj_fajla = fscanf(fid, '%c', 'http://www.textfiles.com/humor/101nos.
+txt')
+sadrzaj_fajla = fscanf(fid, '%c', 'http://www.textfiles.com/humor/101nos.txt')
+sadrzaj_fajla = fscanf('http://www.textfiles.com/humor/101nos.txt', '%c')
+fileID = fopen('http://www.textfiles.com/humor/101nos.txt','r')
+sadrzaj_fajla = fscanf(fileID, '%c')
+fileID = fopen(http://www.textfiles.com/humor/101nos.txt,'r')
+fileID = fopen('http://www.textfiles.com/humor/101nos.txt','r')
+%-- 11/4/2016 10:18 AM --%
+x=[1 2 3 4 5]
+x=[1 2 3;5 6 7;8 9 0]
+(2,1)
+a=(2,1)
+x(2,1)
+x(:,3)
+x(1,:)
+x=1:1:10
+o=zeros(2,4)
+d=eye(3,3)
+inv(d)
+diag(ans)
+p=[1 1 1]
+roots(p)
+p=[1 2 1]
+roots(p)
+a=ones(3,3)
+a=ones(100,100)
+b=[1;-1;3]
+a=ones[3,3]
+a=ones(3,3)
+a(3,:)=[1 0 2]
+help reshape
+y=x^2+1;
+x=-5:0.1:5
+y=x.*x+1;
+plot(x,y)
+stem(x,y)
+subplot(211)
+plot(x,y)
+subplot(211)
+stem(x,y)
+subplot(212)
+plot(x,y)
+figure2;
+figure;
+t=0:1/1000:1;
+y=exp(2*pi*i);
+subplot(221)
+real(y)
+plot(real(y))
+y=exp(2*pi*t*i);
+subplot(221)
+plot(real(y))
+subplot(222)
+plot(imag(y))
+subplot(222)
+plot(abs(y))
+subplot(223)
+plot(imag(y))
+subplot(224)
+plot(angle(y))
+xlabel('argument')
+plot(angle(y))
+subplot(221)
+xlabel('proba')
+subplot(222)
+xlabel('sdkjvh')
+figure
+t=0:1/1000:5;
+y=exp(2*pi*t*i);
+plot(real(y))
+plot(imag(y))
+hold on;
+plot(real(y))
+plot(imag(y))
+help plot
+axis([0 1 0 100])
+axis([0 1000 0 1])
+axis([0 1000 -1 1])
+plot(t,real(y),'b',t,imag(y),'r')
+legend('real','imag')
+%-- 11/9/2016 10:25 AM --%
+n=0:31;
+x=cos(2*pi*n/*sqrt(31));
+x=cos(2*pi*n/sqrt(31));
+n=0:31;
+x=cos(2*pi*n/sqrt(31));
+Untitled
+aaaaaa
+Untitled
+heming
+%-- 11/9/2016 1:12 PM --%
+help find
+help size
+clc
+help size
+clc
+help find
+help max
+clc
+spam_classifier
+clc
+spam_classifier
+clc
+max
+help max
+spam_classifier
+help max
+clc
+help max
+spam_classifier
+clc
+spam_classifier
+clc
+%-- 11/10/2016 1:13 PM --%
+spam_classifier
+size(training_set,1)
+training_set
+training_set(1,:)
+label = zeros(size(test_set, 1), 1);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Ovdje unesite vas kod.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+for c = 1:size(test_set,1)
+vec = test_set(c,:);
+pomLabel = zeros(size(training_set, 1), 1);
+for k = 1 : size(training_set,1)
+tVec = training_set(k,:);
+pomLabel(k,1) = (vec * tVec')/(norm(vec)*norm(tVec));%udaljenost od svakog u trening setu
+end
+pomMin = min(pomLabel)
+label(c,1) = pomLabel(pomLabel == pomMin);
+end
+clc
+apply_nn(training_set, training_C, test_set);
+i = apply_nn(training_set, training_C, test_set);
+i
+training_C(i)
+pom = apply_nn(training_set, training_C, test_set);
+i = apply_nn(training_set, training_C, test_set);
+ii = apply_nn(training_set, training_C, test_set);
+training_C(ii)
+apply_nn(training_set, training_C, test_set);
+kk = apply_nn(training_set, training_C, test_set);
+kk
+help find
+apply_nn(training_set, training_C, test_set);
+kk = apply_nn(training_set, training_C, test_set);
+kk
+acc_svm = sum(predict_label_svm == test_C) / length(test_C)
+predict_label_nn = apply_nn(training_set, training_C, test_set);
+acc_nn = sum(predict_label_nn == test_C) / length(test_C)
+kk = apply_nn(training_set, training_C, test_set);
+predict_label_nn = apply_nn(training_set, training_C, test_set);
+acc_nn = sum(predict_label_nn == test_C) / length(test_C)
+model = svmtrain(training_C, training_set);
+[predicted_label_svm, accuracy, ~] = svmpredict(testing_C, test_set,model);
+spam_classifier
+%-- 11/16/2016 1:16 PM --%
+MSLab4
+clear
+clc
+MSLab4
+help sound
+MSLab4
+help sound
+MSLab4
+help sqaure
+MSLab4
+help wav
+helpaudio
+help audio
+clc
+help readwav
+clc
+MSLab4
+%-- 11/18/2016 10:13 AM --%
+t= [0:0.5:3];
+x1 = cos(2*pi*t);
+t= [0:0.05:3];
+x1 = cos(2*pi*t);
+plot(t,x1)
+hold on
+stem(t,x1)
+xlabel('t')
+ylabel('x(t)')
+t1 = 0:0.1:3;
+x2 = cos(2*pi*t);
+stem(t1,x2,'r');
+x2 = cos(2*pi*t1);
+stem(t1,x2,'r');
+t3 = 0:0.5:3;
+x3 = cos(2*pi*t3);
+stem(t3,x3,'g');
+t3 = 0:0.1:3;
+x1 = cos(2*pi*t3);
+help subplot
+subplot(1,2,1), plot(t3,x1)
+x2 = cos(2*pi*19*t3);
+subplot(1,2,2), plot(t3,x2)
+hold on
+subplot(1,2,2), stem(t3,x2)
+subplot(1,2,1), stem(t3,x1)
+hold on
+subplot(1,2,1), plot(t3,x1)
+x1 = cos(2*pi*t3);
+subplot(1,2,1), plot(t3,x1,'r')
+Fs = 8000;
+F = 440;
+A = 1;
+t = 0:1/Fs:1;
+x = A*cos(2*pi*t*F);
+hold off
+plot(t,x);
+firuge,plot(t,x);
+firuge ,plot(t,x);
+figure ,plot(t,x);
+N = length(t);
+X = fft(x);
+axis([0 0.01 0 1])
+axis([0 0.01 -1 1])
+stem(0:N-1,abs(X))
+F = 440;
+F1 = 1000;
+F2 = 2000;
+F3 = 3000;
+t = 0:1/8000:1;
+x = cos(2*pi*t*F)+0.8*cos(2*pi*t*F1)+0.04*cos(2*pi*t*F2);
+plot(x)
+axis([0 20 -2 2])
+axis([0 100 -2 2])
+X = fft(x);
+N = length(t);
+N = N-1;
+N = N+1;
+stem(0:N,abs(X))
+stem(0:N-1,abs(X))
+t = 0:1/8000:1-1/8000;
+x = cos(2*pi*t*F)+0.8*cos(2*pi*t*F1)+0.04*cos(2*pi*t*F2);
+X = fft(x);
+stem(0:7999,abs(X))
