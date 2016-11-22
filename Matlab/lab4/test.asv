@@ -1,0 +1,8 @@
+function label = test()
+    w = pi/16;
+    L = 64;
+    n = 0:L-1;
+    x = cos(w * n);
+    
+    figstem(n, x)
+end

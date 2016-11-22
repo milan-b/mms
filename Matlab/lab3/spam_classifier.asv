@@ -13,6 +13,8 @@ predict_label_nn = apply_nn(training_set, training_C, test_set);
 
 acc_nn = sum(predict_label_nn == test_C) / length(test_C)
 
+
+
 cm_nn = conf_mat(predict_label_nn, test_C, 2)
 
 %% SVM klasifikator
@@ -25,9 +27,9 @@ cm_nn = conf_mat(predict_label_nn, test_C, 2)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-model = svmtrain(training_C, training_set);
+model = svmtrain(training_set, training_C);
 
-[predicted_label_svm, accuracy, decision_values/prob_estimates] = svmpredict(testing_C, testing_instance_matrix,model);
+[predicted_label_svm, accuracy, ~] = svmpredict(testing_C, test_set,model);
 
 acc_svm = sum(predicted_label_svm == test_C) / length(test_C)
 
