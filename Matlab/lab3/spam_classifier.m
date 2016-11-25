@@ -6,6 +6,8 @@ vocab = generate_vocabulary(conf);
 [training_set, training_C, test_set, test_C] = ...
     compute_collection_representation(vocab, conf);
 
+
+
 %% NN klasifikator
 
 predict_label_nn = apply_nn(training_set, training_C, test_set);
