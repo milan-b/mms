@@ -17,3 +17,4 @@ x5 = [x1 x2 x3 x4];
 spectrogram( x5,hamming(256),128,1024,8000)
 x5 = [x x1 x2 x3 x4];
 spectrogram( x5,hamming(256),128,1024,8000)
+
