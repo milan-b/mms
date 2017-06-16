@@ -24,7 +24,7 @@ for c = 1:size(test_set,1)
         tVec = training_set(k,:);
         pomLabel(k,1) = (vec * tVec')/(norm(vec)*norm(tVec));%udaljenost od svakog u trening setu
     end
-    pomMax = max(pomLabel);
+    pomMax = max(pomLabel);%% moze i sa [~,ind] = max(pomLabel); i odma imamo index najveceg
     pomRez = find(pomLabel == pomMax, 1);
     
     label(c) =  training_C( pomRez(1));

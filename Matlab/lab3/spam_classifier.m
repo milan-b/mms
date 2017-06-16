@@ -6,9 +6,13 @@ vocab = generate_vocabulary(conf);
 [training_set, training_C, test_set, test_C] = ...
     compute_collection_representation(vocab, conf);
 
+%% za slucaj binarnog klasifikatora
+training_set1 = double(training_set > 0);
+test_set1 = double(test_set > 0);
 %% NN klasifikator
 
 predict_label_nn = apply_nn(training_set, training_C, test_set);
+%predict_label_nn = apply_nn(training_set1, training_C, test_set1); %binarna
 
 
 acc_nn = sum(predict_label_nn == test_C) / length(test_C)
